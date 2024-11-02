@@ -1,0 +1,640 @@
+html{
+    overflow-x: hidden;
+}
+
+/* Css for topbar */
+.topbar{
+    background-color: white;
+    color: #4a5568;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    border-bottom: 1px solid #989898; /* Thin underline */
+}
+
+.topbar .social-icons .icons {
+    font-size: 24px;
+    text-decoration: none;
+    color: #4a5568;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.topbar .social-icons .icons:hover {
+    transform: scale(1.2) rotate(2deg);
+}
+
+.logo-and-button h1 {
+    font-size: 2.5rem; /* Adjusts text size */
+    font-weight: bold; /* Makes the font bold */
+}
+
+.logo-and-button h1 .text-gray-700 {
+    color: #4a5568; /* Gray color for "Hotel" */
+}
+
+.logo-and-button h1 .text-red-700 {
+    color: #e43e44; /* Red color for "Book" */
+}
+
+.logo-and-button .Book-an-appointment .nav-item a {
+    background-color: #e43e44;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.logo-and-button .Book-an-appointment .nav-item a:hover {
+    background-color: #E53935; 
+    transform: scale(1.05); 
+}
+
+
+/* End Top Bar */
+
+/* Start Nav Bar */
+.menu{
+    background-color: #4a5568;
+}
+
+
+.navbar-nav .nav-item .nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: 'Oxygen', sans-serif;
+    overflow: hidden;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #E53935;
+    cursor: pointer;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #00C897;
+    font-weight: bold;
+    border-bottom: 2px solid #00C897;
+}
+/* End nav bar */
+
+/* Slider Section */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation classes */
+.animate-h2, .animate-p {
+    opacity: 0; /* Initial state to hide elements */
+}
+
+.animate-h2.active {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-p.active {
+    animation: fadeIn 1s ease-out 0.5s forwards; /* Delay for p element */
+}
+.swiper-slide-overlay img {
+    width: 100%;
+    height: 100vh; 
+    object-fit: cover;
+    overflow-x: hidden; /* Ensure the image covers the container */
+}
+
+.swiper-button-next {
+    left: 35px;
+}
+
+.swiper-button-prev {
+    left: 30px;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 30%;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 48px;
+}
+
+.line {
+    width: 0.4rem;
+    height: 18rem;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    margin-right: 20px;
+}
+
+.swiper-slide-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(46, 46, 46, 0.5));
+}
+
+.navigation-buttons {
+    position: relative;
+    bottom: -30px;
+    left: 45%;
+    transform: translateX(-50%);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 40px;
+    height: 40px;
+    background-color: #e43e44;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 20px;
+}
+/* End Slider Section */
+
+/* Our Stories */
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation to elements */
+.fade-in {
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.fade-in-up {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.our-stories {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.green-text {
+    color: #e43e44;
+}
+
+.about-body {
+    font-family: "Oxygen", sans-serif;
+    font-size: 16px;
+}
+
+.about-us .about-button {
+    background-color: #e43e44;
+    font-family: 'Oxygen', sans-serif;
+    border: none;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.about-us .about-button:hover {
+    background-color: #982020;
+    transform: scale(1.05);
+}
+
+/* End Our Stories */
+
+/* Departments */
+.Departments-home {
+    background-color: #f0f0f034;
+    overflow: hidden;
+}
+
+.card {
+    height: 365px;
+    max-width: 260px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin: 0 auto;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.depart-name {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.depart-image {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.department-end .depart-button {
+    background-color: #e43e44;
+    border: none;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.department-end .depart-button:hover {
+    background-color: #982020;
+    transform: scale(1.05);
+}
+
+/* End Departments */
+
+/* Footer *//* Footer */
+#footer {
+    background-color: #4a5568; /* Adjusted color to match the design */
+    padding: 0;
+}
+
+.footer-top {
+    background-color: #4a5568;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.footer-contact h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.footer-contact .logo-gray {
+    color: #CBD5E0; /* Light gray color for "Hotel" */
+}
+
+.footer-contact .logo-red {
+    color: #e43e44; /* Red color for "Book" */
+}
+
+.footer-contact p {
+    color: #fff;
+}
+
+.footer-links h4 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer-links ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    color: #ccc;
+}
+
+.footer-links ul li i {
+    margin-right: 8px;
+    color: white; /* Icon color to match design */
+}
+
+.footer-bottom {
+    background-color: #e43e44; /* Footer bottom background color */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+
+/* End footer */
+
+/* About us page */
+
+.about-section {
+    padding: 50px 0;
+}
+
+.about-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.about-section p{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 16px;
+}
+
+
+.about-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .about-section h2 {
+        font-size: 2rem;
+    }
+
+    .about-image {
+        margin: 20px 0;
+    }
+
+    .our-vision {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+}
+
+/* End About us page */
+
+/* Contact Us Page */
+.contact-info{
+    background-color: #00C897;
+  }
+  
+  .contact-info p{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 16px;
+  }
+
+  .contact-form .contact-button{
+    background-color: #e43e44;
+    border: none;
+  }
+
+  .contact-form .contact-button:hover{
+    background-color: #982020;
+    transform: scale(1.05);
+  }
+/* End Contact us page */
+
+#appointment-button{
+    background-color: #e43e44;
+    border: none;
+}
+
+#appointment-button:hover{
+    background-color: #982020;
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-top .footer-contact, 
+    .footer-top .footer-links {
+        text-align: center;
+    }
+    
+    .footer-top .footer-contact img {
+        margin: 0 auto 20px auto;
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .footer-links h4 {
+        font-size: 22px;
+    }
+
+    .footer-links ul {
+        margin-top: 20px;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 15px;
+    }
+
+    .footer-links ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    .footer-contact,
+    .footer-links {
+        text-align: center;
+    }
+}
+@media (max-width: 576px) {
+    .footer-top .footer-contact h3, 
+    .footer-top .footer-contact p, 
+    .footer-top .footer-links h4, 
+    .footer-top .footer-links ul {
+        text-align: center;
+    }
+    
+    .footer-top .footer-links ul {
+        padding-left: 0;
+    }
+    
+    .footer-top .footer-links ul li {
+        display: inline-block;
+        margin: 0 10px 10px 0;
+    }
+    
+    .footer-top .footer-links ul li a {
+        display: inline-block;
+    }
+}
+
+/* End Footer */
+
+@media only screen and (max-width: 1200px) {
+    .header .info{
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .navbar-nav {
+      text-align: center;
+    }
+    .navbar-nav .nav-item {
+      margin-bottom: 10px;
+    }
+    .logo-and-button .navbar .navbar-brand img{
+        width: 50%;
+        height: 40%;
+    }
+}
+
+
+@media (max-width:1024){
+    .swiper-container .swiper-wrapper .swiper-slide .swiperClass img {
+        width: 100%;
+        height: 60vh; 
+      }
+}
+
+@media (max-width: 900px) {
+    .overlay-text {
+        font-size: 40px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: bold;
+    }
+
+    .swiper-container .swiper-wrapper .swiper-slide .swiperClass img {
+        width: 100%;
+        height: 60vh; 
+      }
+}
+
+@media (max-width: 768px) {
+    html{
+        overflow-x: hidden;
+    }
+    .swiper-container .swiper-wrapper .swiper-slide .swiperClass img {
+      width: 100%;
+      height: 60vh; /* Adjust height based on viewport height */
+    }
+    .overlay-text .message{
+        font-size: 24px;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        /* font-weight: bold; */
+    }
+
+    .navigation-buttons{
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .overlay-text .message{
+        font-size: 24px;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        /* font-weight: bold; */
+    }
+
+    .overlay-text h2 {
+        font-size: 24px;
+    }
+
+    .overlay-text p {
+        font-size: 24px;
+    }
+
+    .swiper-container .swiper-wrapper .swiper-slide .swiperClass img {
+        width: 100%;
+        height: 50vh; /* Adjust height based on viewport height */
+    }
+
+    .our-stories{
+        font-size: 40px;
+    }
+}
+@media (max-width: 300px) {
+    .overlay-text {
+        font-size: 24px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: bold;
+    }
+
+    .overlay-text h2 {
+        font-size: 20px;
+    }
+
+    .overlay-text p {
+        font-size: 22px;
+    }
+
+    .swiper-container .swiper-wrapper .swiper-slide .swiperClass img {
+        width: 100%;
+        height: 50vh; /* Adjust height based on viewport height */
+    }
+
+}
+
+@media (max-width: 768px) {
+    .testimonial-wrap {
+        margin: 10px;
+    }
+
+    .testimonial-item p {
+        font-size: 0.9rem;
+    }
+
+    .testimonial-item h3 {
+        font-size: 1.15rem;
+    }
+
+    .testimonial-item h5 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial-wrap {
+        margin: 5px;
+        padding: 15px;
+    }
+
+    .testimonial-item p {
+        font-size: 0.85rem;
+    }
+
+    .testimonial-item h3 {
+        font-size: 1rem;
+    }
+
+    .testimonial-item h5 {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .packages .card {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .packages .card {
+        padding: 15px;
+    }
+}
