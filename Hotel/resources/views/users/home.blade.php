@@ -68,8 +68,8 @@
                       <div class="card-body d-flex flex-column justify-content-center align-items-center">
                           <img class="depart-image rounded mb-4" src="{{ asset('storage/' . $room->image) }}"
                               alt="{{ $room->title }}" />
-                          <div class="depart-name text-center mt-2">{{ $room->type }}</div>
-                          <div class="text-center mt-2">{{ $room->description }}</div>
+                          <div class="depart-name text-center mt-2">{{ $room->type_as_string }}</div>
+                          <div class="text-center mt-2">{{ Str::limit($room->description, 40) }}</div>
                       </div>
                   </div>
               </div>
@@ -78,7 +78,7 @@
   </div>
   <div class="row justify-content-center">
       <div class="department-end col-auto">
-          <a class="depart-button btn btn-primary mt-5">Explore All</a>
+          <a class="depart-button btn btn-primary mt-5" href="/show-room">Explore All</a>
       </div>
   </div>
 </section>

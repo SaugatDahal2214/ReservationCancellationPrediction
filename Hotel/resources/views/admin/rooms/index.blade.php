@@ -39,7 +39,7 @@
                                 <tr class="border border-gray-300 md:border-none block md:table-row">
                                     <td class="border border-gray-300 md:border-none block md:table-cell p-2">{{ $room->id }}</td>
                                     <td class="border border-gray-300 md:border-none block md:table-cell p-2">{{ $room->title }}</td>
-                                    <td class="border border-gray-300 md:border-none block md:table-cell p-2">{{ $room->type }}</td>
+                                    <td class="border border-gray-300 md:border-none block md:table-cell p-2">{{ $room->type_as_string }}</td>
                                     <td class="border border-gray-300 md:border-none block md:table-cell p-2">{{ $room->description }}</td>
                                     <td class="border border-gray-300 md:border-none block md:table-cell p-2">
                                         @if($room->image)

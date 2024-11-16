@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
+use App\Http\Controllers\RoomController;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 
 class room extends Model
 {
@@ -17,4 +19,9 @@ class room extends Model
         'image',
         'price',
     ];
+
+    public function getTypeAsStringAttribute()
+{
+    return array_search($this->type, RoomController::ROOM_TYPES);
+}
 }

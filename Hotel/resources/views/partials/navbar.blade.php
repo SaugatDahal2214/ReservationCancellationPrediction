@@ -8,18 +8,15 @@
         </button>
         <!-- Navbar Links -->
         <div class="collapse navbar-collapse justify-content-center" id="menuCollapse">
-            <ul class="navbar-nav gap-3">
-                <li class="nav-item {{ Request::is('home') ? 'active' : '' }}">
-                    <a class="nav-link" href="#home">Home</a>
+            <ul class="navbar-nav gap-5">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
                 </li>
-                <li class="nav-item {{ Request::is('about') ? 'active' : '' }}">
-                    <a class="nav-link" href="#about">About Us</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="/#about">About Us</a>
                 </li>
-                <li class="nav-item {{ Request::is('departments') ? 'active' : '' }}">
-                    <a class="nav-link">Rooms</a>
-                </li>
-                <li class="nav-item {{ Request::is('doctors') ? 'active' : '' }}">
-                    <a class="nav-link">Booking</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="/show-room">Rooms</a>
                 </li>
                 <!-- Online Appointment option for smaller screens -->
                 {{-- <li class="nav-item d-lg-none {{ Request::is('appointment/create') ? 'active' : '' }}">

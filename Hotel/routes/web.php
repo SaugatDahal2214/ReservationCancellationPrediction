@@ -1,25 +1,35 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\StoryController;
 use App\Http\Controllers\RoomController;
+use App\Http\Controllers\StripeController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Slider;
 
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/',[HomeController::class, 'home'])->name('home');
+Route::get('/show-room',[RoomController::class, 'showRoom'])->name('rooms');
+Route::get('/booking/{room_type}/{price}', [BookingController::class, 'showForm'])->name('booking.form');
+Route::post('booking-form', [BookingController::class, 'submitForm'])->name('booking.submit');
+
+Route::get('/stripe/payment/{bookingId}', [StripeController::class, 'payment'])->name('stripe.payment');
+
+Route::get('stripe/success', [StripeController::class, 'success'])->name('stripe.success');
+Route::get('stripe/cancel', [StripeController::class, 'cancel'])->name('stripe.cancel');
+
 
 
 Route::get('/admin', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -47,16 +57,18 @@ Route::middleware('auth')->group(function () {
     Route::get('/rooms/{room}/edit', [RoomController::class, 'edit'])->name('rooms.edit');
     Route::put('/rooms/{room}/update', [RoomController::class, 'update'])->name('rooms.update');
     Route::delete('/rooms/{room}/delete', [RoomController::class, 'delete'])->name('rooms.delete');
+
+    Route::get('/bookings', [BookingController::class, 'index'])->name('bookings.index');
+
+    Route::get('/predictions', [BookingController::class, 'PredictionIndex'])->name('predictions.index');
+
+
+    
+
 });
 
 
-Route::get('/bookings', function () {
-    return view('dashboard');
-})->name('bookings');
 
-Route::get('/predictions', function () {
-    return view('dashboard');
-})->name('predictions');
 
 
 

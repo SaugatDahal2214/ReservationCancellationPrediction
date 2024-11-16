@@ -32,14 +32,9 @@
                             <div class="mb-4">
                                 <label for="type" class="block text-sm font-medium text-gray-700">Type</label>
                                 <select id="type" name="type" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required>
-                                    <option value="" disabled selected>Select Room Type</option>
-                                    <option value="Single">Single</option>
-                                    <option value="Double">Double</option>
-                                    <option value="Suite">Suite</option>
-                                    <option value="Deluxe">Deluxe</option>
-                                    <option value="Family">Family</option>
-                                    <option value="Executive">Executive</option>
-                                    <option value="Presidential">Presidential</option>
+                                    @foreach (App\Http\Controllers\RoomController::ROOM_TYPES as $type => $value)
+        <option value="{{ $type }}" {{ old('type', $room->type ?? '') === $type ? 'selected' : '' }}>{{ $type }}</option>
+    @endforeach
                                 </select>
                             </div>
                 

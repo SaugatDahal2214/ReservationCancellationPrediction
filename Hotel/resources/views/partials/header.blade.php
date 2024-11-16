@@ -35,7 +35,7 @@
                 <div class="Book-an-appointment d-none d-md-block">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="appointment-button btn btn-primary" id="appointment">Book a Room</a>
+                            <a class="appointment-button btn btn-primary" id="appointment" href="{{ route('rooms') }}">Book a Room</a>
                         </li>
                     </ul>
                 </div>

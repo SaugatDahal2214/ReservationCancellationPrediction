@@ -36,12 +36,12 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('bookings')" :active="request()->routeIs('bookings')">
+                    <x-nav-link :href="route('bookings.index')" :active="request()->routeIs('bookings.index')">
                         {{ __('Bookings') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('predictions')" :active="request()->routeIs('predictions')">
+                    <x-nav-link :href="route('predictions.index')" :active="request()->routeIs('predictions.index')">
                         {{ __('Predictions') }}
                     </x-nav-link>
                 </div>
